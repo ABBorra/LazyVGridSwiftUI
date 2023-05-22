@@ -19,13 +19,14 @@ struct ContentView: View {
         
         ScrollView {
             
-            Text("LazyVGrid")
-                .font(Font.largeTitle)
+            Rectangle()
+                .frame(height: 200)
+                .foregroundColor(.orange)
             LazyVGrid(
                 
                 columns: coloum,
                 alignment: .center,
-                spacing: 6, pinnedViews: [], content: {
+                spacing: 6, pinnedViews: [.sectionHeaders], content: {
                     
                     Section(header: Text("Section: 1")
                         .foregroundColor(Color.white)
